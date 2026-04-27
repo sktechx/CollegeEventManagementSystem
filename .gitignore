@@ -1,0 +1,8 @@
+*.pyc
+Lib
+pip.exe
+flask.exe
+pip3.10.exe
+pip3.exe
+python.exe
+pythonw.exe

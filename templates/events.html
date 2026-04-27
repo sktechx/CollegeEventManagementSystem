@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- UPCOMING EVENTS -->
+
+<h1 class="page-title">Upcoming Events</h1>
+
+<div class="events-container">
+
+{% for event in events %}
+
+<div class="event-card">
+
+<div class="new-badge">NEW</div>
+
+<img src="{{ event[3] }}" class="event-image">
+
+<div class="event-content">
+
+<h2>{{ event[1] }}</h2>
+
+<p>{{ event[2] }}</p>
+
+<a href="/register">
+<button class="register-btn">Register</button>
+</a>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>  <!-- ✅ ab yaha close hoga -->
+
+<!-- Countdown -->
+
+<div class="countdown">
+
+<h3>Tech Fest Starts In</h3>
+
+<p id="timer"></p>
+
+</div>
+
+<!-- EVENTS HIGHLIGHTS -->
+
+<h1 class="highlight-title">Event Highlights</h1>
+
+<input type="text" id="searchEvent" placeholder="Search Event..." onkeyup="searchEvent()">
+
+<!-- TECH FEST -->
+
+<h2 class="gallery-title">Tech Fest</h2>
+
+<div class="gallery">
+
+<img src="https://sdpcollege.com/xelcms/public/uploads/gallery/1770967836_df35604fcc9c95cffce9.jpg">
+<img src="https://sdpcollege.com/xelcms/public/uploads/gallery/1764401532_6135bb979c8e134443d2.jpg">
+<img src="https://sdpcollege.com/xelcms/public/uploads/gallery/1748675354_67ba4d6f04c5a51173ea.jpeg">
+
+</div>
+
+<!-- CULTURAL FEST -->
+
+<h2 class="gallery-title">Cultural Fest</h2>
+
+<div class="gallery">
+
+<img src="https://sdpcollege.com/xelcms/public/uploads/gallery/1725079012_e1c8d3f4841f5c96b54b.jpeg">
+<img src="https://sdpcollege.com/xelcms/public/uploads/gallery/1724475983_c1c6d9cc38941ce2b459.jpg">
+<img src="https://sdpcollege.com/xelcms/public/uploads/gallery/1755151695_c2f959d778197a86553c.jpeg">
+
+</div>
+
+<!-- CODING COMPETITION -->
+
+<h2 class="gallery-title">Coding Competition</h2>
+
+<div class="gallery">
+
+<img src="https://sdpcollege.com/xelcms/public/uploads/gallery/1769844624_b41c03cca190ebae243b.jpg">
+<img src="https://sdpcollege.com/xelcms/public/uploads/gallery/1769069302_272ecd6010270645b74b.jpg">
+<img src="https://sdpcollege.com/xelcms/public/uploads/gallery/1742018710_824c830f20dd86c326e9.jpeg">
+
+</div>
+
+{% endblock %}

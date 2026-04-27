@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="registration">
+
+<h2>Student Event Registration</h2>
+
+<form method="POST" action="/register" class="register-form">
+
+<label>Full Name</label>
+<input type="text" name="name" required>
+
+<label>Email Address</label>
+<input type="email" name="email" required>
+
+<label>Select Event</label>
+<select name="event">
+<option>Tech Fest</option>
+<option>Coding Competition</option>
+<option>Cultural Fest</option>
+</select>
+
+<button type="submit">Register</button>
+
+</form>
+
+</section>
+
+{% endblock %}
+
+<!-- <script src="{{ url_for('static', filename='script.js') }}"></script> -->
+
+

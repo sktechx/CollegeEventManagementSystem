@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Admin Dashboard</h1>
+
+<h2>Add Event</h2>
+
+<form method="POST">
+
+<input type="text" name="title" placeholder="Event Title" required>
+
+<input type="text" name="description" placeholder="Description">
+
+<input type="text" name="image" placeholder="Image URL">
+
+<button type="submit">Add Event</button>
+
+</form>
+
+
+<h2>Events List</h2>
+
+<table border="1">
+
+<tr>
+<th>Sr No.</th>
+<th>Title</th>
+<th>Delete</th>
+</tr>
+
+{% for event in events %}
+
+<tr>
+<td>{{ event[0] }}</td>
+<td>{{ event[1] }}</td>
+
+<td>
+<a href="/delete-event/{{ event[0] }}">
+<button>Delete</button>
+</a>
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+
+<h2>Registered Students</h2>
+
+<table border="1">
+
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Event</th>
+<th>Delete</th>
+</tr>
+
+{% for student in students %}
+
+<tr>
+
+<td>{{ student[1] }}</td>
+<td>{{ student[2] }}</td>
+<td>{{ student[3] }}</td>
+
+<td>
+<a href="/delete-student/{{ student[0] }}">
+<button>Delete</button>
+</a>
+</td>
+
+</tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Image Slider -->
+
+<div id="welcome-screen">
+    <h1>Welcome to College Event Portal</h1>
+</div>
+
+<div id="slider" class="hidden">
+    <img src="https://scontent.fixc4-5.fna.fbcdn.net/v/t39.30808-6/644265440_1326052829545391_664556759929306703_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_ohc=uY3OwkOWwzUQ7kNvwGTSXVM&_nc_oc=AdnfgpYBX_a5Q-7LZrz4f-6cgQwbfdfpq_lpSBEwc1ut2UbeXUc7BPD6Comqj3E4dIirsgZWITcZONDeA8UtRwpH&_nc_zt=23&_nc_ht=scontent.fixc4-5.fna&_nc_gid=IMmHmNhCvwIsTrgE7TvJCA&_nc_ss=8&oh=00_AfzvhodAe0S2Xw997tQrEVI4vAFXmTL2gNcCCmdtefC4-A&oe=69C00992" class="slide">
+    <img src="https://images.bhaskarassets.com/thumb/1200x900/web2images/521/2024/07/26/dn99103131v-v25133_manual.jpg" class="slide">
+    <img src="https://sdpcollege.com/xelcms/public/uploads/gallery/1738138408_1e5a9b73f16e507a5979.jpeg" class="slide">
+    <img src="{{ url_for('static', filename='img.jpg') }}" class="slide>">
+</div>
+
+<!-- About Section -->
+
+<section class="about">
+
+<h2>About Our Events</h2>
+
+<p>
+Our college organizes various technical, cultural and sports events.
+Students can register and participate easily through this portal.
+</p>
+
+</section>
+
+
+<!-- Event Cards -->
+
+<section class="events">
+
+<h2><center>Upcoming College Events</center></h2>
+
+<div class="event-container">
+
+<div class="event-card">
+
+<h3>Tech Fest</h3>
+
+<p>Explore the latest technology and innovation.</p>
+
+<a href="register.html" class="register-btn">Register</a>
+
+</div>
+
+
+<div class="event-card">
+
+<h3>Coding Competition</h3>
+
+<p>Show your coding skills and compete with others.</p>
+
+<a href="register.html" class="register-btn">Register</a>
+
+</div>
+
+
+<div class="event-card">
+
+<h3>Cultural Fest</h3>
+
+<p>Enjoy dance, music and cultural performances.</p>
+
+<a href="register.html" class="register-btn">Register</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer>
+
+<div class="footer-content">
+
+<p>© 2026 College Event Management System</p>
+
+<p>SDP College for Women, Ludhiana</p>
+
+</div>
+
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+{% endblock %}
+

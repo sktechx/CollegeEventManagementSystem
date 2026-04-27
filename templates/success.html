@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Success</title>
+
+<style>
+
+body{
+margin:0;
+padding:0;
+font-family:Arial;
+background:#f0f2f5;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+/* Popup Box */
+
+.popup-box{
+position:relative;
+background:white;
+padding:40px;
+border-radius:12px;
+text-align:center;
+box-shadow:0px 10px 25px rgba(0,0,0,0.2);
+overflow:hidden;
+}
+
+.success{
+color:green;
+font-size:32px;
+margin-bottom:10px;
+}
+
+.event-text{
+font-size:20px;
+margin-bottom:20px;
+}
+
+/* Button */
+
+button{
+padding:10px 20px;
+background:#007BFF;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0056b3;
+}
+
+
+/* 🎈 Balloons */
+
+.balloons{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+pointer-events:none;
+}
+
+.balloons span{
+position:absolute;
+bottom:-100px;
+width:40px;
+height:50px;
+border-radius:50%;
+animation:rise 5s linear infinite;
+}
+
+/* Colors */
+
+.balloons span:nth-child(1){
+left:10%;
+background:red;
+animation-delay:0s;
+}
+
+.balloons span:nth-child(2){
+left:30%;
+background:blue;
+animation-delay:1s;
+}
+
+.balloons span:nth-child(3){
+left:50%;
+background:green;
+animation-delay:2s;
+}
+
+.balloons span:nth-child(4){
+left:70%;
+background:orange;
+animation-delay:3s;
+}
+
+.balloons span:nth-child(5){
+left:90%;
+background:pink;
+animation-delay:4s;
+}
+
+/* Animation */
+
+@keyframes rise{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-800px);
+opacity:0;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="popup-box">
+
+<h1 class="success">✔ Registration Successful</h1>
+
+<p class="event-text">Event: {{ event }}</p>
+
+<!-- 🎈 Balloons -->
+<div class="balloons">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<a href="/">
+<button>Go Home</button>
+</a>
+
+</div>
+
+<script>
+setTimeout(()=>{
+window.location.href = "/";
+},3000);
+</script>
+
+
+</body>
+</html>
